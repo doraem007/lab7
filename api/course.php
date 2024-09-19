@@ -79,7 +79,7 @@ elseif ($requestMethod == 'DELETE') {
     if (isset($_GET['course_code'])) {
         $course_code = mysqli_real_escape_string($link, $_GET['course_code']);
 
-        $sql = "DELETE FROM exam_result WHERE course_code = '$course_code'";
+        $sql = "DELETE FROM course WHERE course_code = '$course_code'";
         $result = mysqli_query($link, $sql);
 
         if ($result) {
